@@ -320,7 +320,7 @@ def predicate_to_clauses(formula: Formula) -> List[Formula]:
 
 # 示例使用
 if __name__ == "__main__":
-    # 示例公式: ∀x(¬P(x) → ∃y(Q(x,y) ∧ R(y)))   IMPL
+    # 示例公式: ∀x(¬P(x) ↔ ∃y(Q(x,y) ∧ R(y)))   IMPL
     example_formula = Formula('FORALL', ['x', Formula('EQUIV', [
         Formula('NOT', [Formula('PRED', ['P', 'x'])]),
         Formula('EXISTS', ['y', Formula('AND', [
